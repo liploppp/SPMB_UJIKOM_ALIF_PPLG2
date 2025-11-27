@@ -1,0 +1,316 @@
+/* Admin Dashboard Custom Styles */
+
+/* Statistics Cards Enhancement */
+.stats-card {
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stats-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.stats-card.purple {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.stats-card.green {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+.stats-card.orange {
+    background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+}
+
+.stats-card.red {
+    background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+}
+
+.stats-number {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 8px 0;
+    line-height: 1;
+}
+
+.stats-label {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.stats-icon {
+    font-size: 2.5rem;
+    opacity: 0.25;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+/* Chart Cards */
+.chart-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    padding: 25px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.chart-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.chart-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f7fafc;
+}
+
+.chart-title i {
+    margin-right: 8px;
+    color: #4299e1;
+    font-size: 1rem;
+}
+
+.chart-legend {
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.chart-legend::-webkit-scrollbar {
+    width: 4px;
+}
+
+.chart-legend::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+}
+
+.chart-legend::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 2px;
+}
+
+.chart-legend::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Table Enhancements */
+.modern-table {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.modern-table .table-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 25px;
+}
+
+.modern-table .table-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.modern-table .table-subtitle {
+    font-size: 0.85rem;
+    opacity: 0.85;
+    margin: 0;
+}
+
+.modern-table table {
+    margin: 0;
+}
+
+.modern-table thead th {
+    background: #f8fafc;
+    border: none;
+    padding: 15px 20px;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modern-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.modern-table tbody tr:hover {
+    background: #f7fafc;
+}
+
+.modern-table tbody td {
+    padding: 15px 20px;
+    vertical-align: middle;
+    border: none;
+    font-size: 0.9rem;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.status-badge i {
+    margin-right: 5px;
+}
+
+.status-badge.success {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+}
+
+.status-badge.warning {
+    background: linear-gradient(135deg, #ed8936, #dd6b20);
+    color: white;
+}
+
+.status-badge.danger {
+    background: linear-gradient(135deg, #f56565, #e53e3e);
+    color: white;
+}
+
+/* Action Buttons */
+.action-btn {
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.action-btn i {
+    margin-right: 5px;
+}
+
+.action-btn.primary {
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    color: white;
+}
+
+.action-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(66, 153, 225, 0.4);
+    color: white;
+}
+
+/* User Avatar */
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    padding: 0 15px;
+    max-width: 100%;
+}
+
+.section-spacing {
+    margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats-card {
+        margin-bottom: 15px;
+        min-height: 100px;
+        padding: 15px;
+    }
+    
+    .stats-number {
+        font-size: 1.5rem;
+    }
+    
+    .chart-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .modern-table .table-header {
+        padding: 15px 20px;
+    }
+    
+    .modern-table thead th,
+    .modern-table tbody td {
+        padding: 12px 15px;
+        font-size: 0.85rem;
+    }
+    
+    .dashboard-container {
+        padding: 0 10px;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading States */
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}

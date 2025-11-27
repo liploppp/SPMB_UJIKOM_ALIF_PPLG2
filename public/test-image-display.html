@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Image Display</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .image-test { max-width: 300px; border: 1px solid #ccc; margin: 10px 0; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Test Image Display</h1>
+    
+    <div class="test-section">
+        <h2>1. Test berkas.php</h2>
+        <p>Test dengan file yang ada:</p>
+        <img src="berkas.php?file=1762920188_IJAZAH.jpg" class="image-test" onerror="this.style.display='none'; this.nextSibling.style.display='block';">
+        <div style="display:none; color:red;">Gagal memuat melalui berkas.php</div>
+        
+        <p><a href="berkas.php?file=1762920188_IJAZAH.jpg" target="_blank">Buka langsung berkas.php</a></p>
+        <p><a href="berkas.php?debug=1&file=1762920188_IJAZAH.jpg" target="_blank">Debug berkas.php</a></p>
+    </div>
+    
+    <div class="test-section">
+        <h2>2. Test Laravel Route</h2>
+        <p>Test dengan Laravel route:</p>
+        <img src="storage/berkas/1762920188_IJAZAH.jpg" class="image-test" onerror="this.style.display='none'; this.nextSibling.style.display='block';">
+        <div style="display:none; color:red;">Gagal memuat melalui Laravel route</div>
+        
+        <p><a href="storage/berkas/1762920188_IJAZAH.jpg" target="_blank">Buka langsung storage route</a></p>
+    </div>
+    
+    <div class="test-section">
+        <h2>3. Test Direct Path</h2>
+        <p>Test dengan path langsung:</p>
+        <img src="storage/berkas/1762920188_IJAZAH.jpg" class="image-test" onerror="this.style.display='none'; this.nextSibling.style.display='block';">
+        <div style="display:none; color:red;">Gagal memuat path langsung</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>4. File List</h2>
+        <p>Beberapa file yang tersedia untuk test:</p>
+        <ul>
+            <li><a href="berkas.php?file=1762920188_IJAZAH.jpg" target="_blank">1762920188_IJAZAH.jpg</a></li>
+            <li><a href="berkas.php?file=1762920190_AKTA.jpg" target="_blank">1762920190_AKTA.jpg</a></li>
+            <li><a href="berkas.php?file=1763103406_KK.jpeg" target="_blank">1763103406_KK.jpeg</a></li>
+        </ul>
+    </div>
+    
+    <script>
+    // Test dengan JavaScript
+    function testImageLoad(src, elementId) {
+        const img = new Image();
+        const resultElement = document.getElementById(elementId);
+        
+        img.onload = function() {
+            resultElement.innerHTML = '<span style="color: green;">✓ Berhasil dimuat</span>';
+        };
+        
+        img.onerror = function() {
+            resultElement.innerHTML = '<span style="color: red;">✗ Gagal dimuat</span>';
+        };
+        
+        img.src = src;
+    }
+    
+    // Test semua metode
+    window.onload = function() {
+        console.log('Testing image loading methods...');
+        testImageLoad('berkas.php?file=1762920188_IJAZAH.jpg', 'test1');
+        testImageLoad('storage/berkas/1762920188_IJAZAH.jpg', 'test2');
+    };
+    </script>
+    
+    <div class="test-section">
+        <h2>5. JavaScript Test Results</h2>
+        <p>berkas.php: <span id="test1">Testing...</span></p>
+        <p>storage route: <span id="test2">Testing...</span></p>
+    </div>
+</body>
+</html>

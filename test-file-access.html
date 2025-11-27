@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test File Access</title>
+</head>
+<body>
+    <h1>Test Akses File Berkas</h1>
+    
+    <h3>Test URL:</h3>
+    <ul>
+        <li><a href="/storage/berkas/1763133204_IJAZAH.jpg" target="_blank">Via Storage Route</a></li>
+        <li><a href="/berkas.php?file=1763133204_IJAZAH.jpg" target="_blank">Via PHP Direct</a></li>
+        <li><a href="/file/1763133204_IJAZAH.jpg" target="_blank">Via Laravel Route</a></li>
+    </ul>
+    
+    <h3>Test Image Display:</h3>
+    <img src="/storage/berkas/1763133204_IJAZAH.jpg" alt="Test Image" style="max-width: 300px; border: 1px solid #ccc;">
+    
+    <h3>Debug Info:</h3>
+    <p>File should be at: storage/app/public/berkas/1763133204_IJAZAH.jpg</p>
+</body>
+</html>
